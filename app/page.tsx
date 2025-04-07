@@ -87,7 +87,7 @@ export default function Home() {
         </p>
       </div>
     </section>
-
+   
     <section id="about" className="about section">
       {/* Section Title */}
       <div className="container section-title" data-aos="fade-up">
@@ -114,7 +114,7 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="col-lg-8 content">
-            <h2>UI/UX Designer &amp; Web Developer.</h2>
+            <h2>Web Developer</h2>
             <p className="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -122,8 +122,8 @@ export default function Home() {
             <div className="row">
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 SEP 1999</span></li>
+                  {/*<li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>*/}
                   <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
                   <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
                 </ul>
