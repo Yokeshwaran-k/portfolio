@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 
+
 function Header(){
   return (
   
@@ -14,7 +15,7 @@ function Header(){
 
     <a href="index.html" className="logo d-flex align-items-center justify-content-center">
       
-      <h1 className="sitename">Yokeshwaran K</h1>
+      <h1 className="sitename"></h1>
     </a>
 
     <div className="social-links text-center">
@@ -59,6 +60,7 @@ function Header(){
 }
 
 export default function Home() {
+  const PersonalDetail = {Name:"Yokeshwaran K", Age:"26", Mobile:"9345542901", Master:"Master of Computer Application", Ug:"Bachelor of Computer Application"};
   return (
    
     <>
@@ -75,9 +77,9 @@ export default function Home() {
       />
 
       <div className="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Yokeshwaran K</h2>
+        <h2>{PersonalDetail.Name}</h2>
         <p>
-          I'm Web Developer
+          Role
           {/*<Typed
             strings={["Designer", "Developer", "Freelancer", "Photographer"]}
             typeSpeed={50}
@@ -93,8 +95,8 @@ export default function Home() {
       <div className="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit.
-          Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+        I am a professional Web Developer with over 3 years of experience in designing, developing, and maintaining dynamic and responsive websites and web applications.
+        Throughout my career, I have successfully collaborated with clients and cross-functional teams to create high-performance websites, custom themes, plugins, and backend functionalities. I have a deep understanding of UI/UX principles, SEO best practices, and modern development frameworks, ensuring every project I undertake is not only visually compelling but also functionally sound.
         </p>
       </div>
 
@@ -124,17 +126,17 @@ export default function Home() {
                 <ul>
                   <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 SEP 1999</span></li>
                   {/*<li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>*/}
-                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9876543210</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>ChennaI</span></li>
                 </ul>
               </div>
 
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>MCA</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>yokeshwaranyoki001@gmail.com.com</span></li>
+                  {/*<li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>*/}
                 </ul>
               </div>
             </div>
@@ -273,7 +275,123 @@ export default function Home() {
   </div>
 </section>
 
+<section id="resume" className="resume section">
+  {/* Section Title */}
+  <div className="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>
+      Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+      Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+      Quia fugiat sit in iste officiis commodi quidem hic quas.
+    </p>
+  </div>
 
+  {/* Resume Content */}
+  <div className="container">
+    <div className="row">
+
+      {/* Left Column */}
+      <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 className="resume-title">Sumary</h3>
+        <div className="resume-item pb-0">
+          <h4>Brandon Johnson</h4>
+          <p>
+            <em>
+              Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
+              developing user-centered digital/print marketing material from initial concept to final, polished deliverable.
+            </em>
+          </p>
+          <ul>
+            <li>Portland par 127, Orlando, FL</li>
+            <li>(123) 456-7891</li>
+            <li>alice.barkley@example.com</li>
+          </ul>
+        </div>
+
+        <h3 className="resume-title">Education</h3>
+        <div className="resume-item">
+          <h4>Master of Computer Application</h4>
+          <h5>2019 - 2021</h5>
+          <p><em>Vel Tech High Tech Engineering College, Chennai</em></p>
+          <p>
+            Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.
+            Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend
+          </p>
+        </div>
+
+        <div className="resume-item">
+          <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+          <h5>2010 - 2014</h5>
+          <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+          <p>
+            Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis
+            Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem
+            Earum molestiae consequatur neque etlon sader mart dila
+          </p>
+        </div>
+      </div>
+
+      {/* Right Column */}
+      <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 className="resume-title">Professional Experience</h3>
+        <div className="resume-item">
+          <h4>Senior graphic design specialist</h4>
+          <h5>2019 - Present</h5>
+          <p><em>Experion, New York, NY</em></p>
+          <ul>
+            <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+            <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+            <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+            <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+          </ul>
+        </div>
+
+        <div className="resume-item">
+          <h4>Graphic design specialist</h4>
+          <h5>2017 - 2018</h5>
+          <p><em>Stepping Stone Advertising, New York, NY</em></p>
+          <ul>
+            <li>Developed numerous marketing programs (logos, brochures, infographics, presentations, and advertisements).</li>
+            <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+            <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+            <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer id="footer" className="footer position-relative light-background">
+      <div className="container">
+        <div className="copyright text-center">
+          <p>
+            © <span>Copyright</span>{' '}
+            <strong className="px-1 sitename">iPortfolio</strong>{' '}
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div className="credits">
+          {/* All the links in the footer should remain intact. */}
+          {/* You can delete the links only if you've purchased the pro version. */}
+          {/* Licensing information: https://bootstrapmade.com/license/ */}
+          {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] 
+          Designed by{' '}
+          <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">
+            BootstrapMade
+          </a>{' '}
+          Distributed by{' '}
+          <a href="https://themewagon.com" target="_blank" rel="noopener noreferrer">
+            ThemeWagon
+          </a>*/}
+        </div>
+      </div>
+    </footer>
+    <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center">
+      <i className="bi bi-arrow-up-short"></i>
+    </a>
     </main>
     </>
     

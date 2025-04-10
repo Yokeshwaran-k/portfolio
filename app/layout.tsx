@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-
+const names = {Role:"dev"}
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,17 +24,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
        <head>
         <link rel="stylesheet" href="/css/main.css" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
         <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/css/bootstrap-icons.css" />
         <link rel="stylesheet" href="styles/css/aos.css" />
         <Script src="js/aos.js" strategy="beforeInteractive" />
         <Script src="js/glightbox.min.js" strategy="lazyOnload" />
-        <Script src="js/swiper-bundle.min.js" strategy="lazyOnload" />
+        <Script src="js/swiper-bundle.min.js" />
+        <Script src="js/purecounter_vanilla.js" />
+        <Script src="js/typed.module.js" />
+        <Script src="js/bootstrap.js" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
