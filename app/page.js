@@ -10,7 +10,7 @@ function Header(){
     <i className="header-toggle d-xl-none bi bi-list"></i>
 
     <div className="profile-img">
-      <img src="img/my-profile-img.jpg" alt="" className="img-fluid rounded-circle" />
+      <img src="img/profile-img.png" alt="" className="img-fluid rounded-circle" />
     </div>
 
     <a href="index.html" className="logo d-flex align-items-center justify-content-center">
@@ -30,26 +30,8 @@ function Header(){
       <ul>
         <li><a href="#hero" className="active"><i className="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i className="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i className="bi bi-images navicon"></i> Skills</a></li>
         <li><a href="#resume"><i className="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i className="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i className="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li className="dropdown"><a href="#"><i className="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li className="dropdown"><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
         <li><a href="#contact"><i className="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -60,7 +42,7 @@ function Header(){
 }
 
 export default function Home() {
-  const PersonalDetail = {Name:"Yokeshwaran K", Age:"26", Mobile:"9345542901", Master:"Master of Computer Application", Ug:"Bachelor of Computer Application"};
+  const PersonalDetail = {Name:"Yokeshwaran K", Email : "yokeshwaranyoki001@gmail.com", Role : "Full Stack Web Developer", Age:"26", Address:"Kovilambakkam, Chennai - 600129", Mobile:"9345542901", Master:"Master of Computer Application", bachelor :{Ug_degree:"Bachelor of Computer Application", Passed_out : "2016 - 2019", College:"Annai Therasa Arts and Science College, Thirukkazhukundram"},Masters : {PG_degree : "Master of Computer Application", Passed_out : "2019 - 2021", College : "Vel Tech High Tech Engineering College, Avadi, Chennai"}, Work_exp :{Company_Name : "Johnbhai Softcom Pvt Ltd", Location : "Chennai - 600044", Joining : "2021 - Present"}, DOB : "18 SEP 1999"};
   return (
    
     <>
@@ -79,7 +61,7 @@ export default function Home() {
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <h2>{PersonalDetail.Name}</h2>
         <p>
-          Role
+          {PersonalDetail.Role}
           {/*<Typed
             strings={["Designer", "Developer", "Freelancer", "Photographer"]}
             typeSpeed={50}
@@ -104,11 +86,11 @@ export default function Home() {
       <div className="container" data-aos="fade-up" data-aos-delay="100">
         <div className="row gy-4 justify-content-center">
           {/* Profile Image */}
-          <div className="col-lg-4">
+          <div className="col-lg-4 about-profile-img">
             <Image
-              src="/assets/img/my-profile-img.jpg"
-              width={400}
-              height={400}
+              src="/img/profile-img.png"
+              width={200}
+              height={200}
               className="img-fluid"
               alt="Profile Image"
             />
@@ -116,100 +98,46 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="col-lg-8 content">
-            <h2>Web Developer</h2>
-            <p className="fst-italic py-3">
+            <h2>{PersonalDetail.Role}</h2>
+            {/*<p className="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            </p>*/}
 
-            <div className="row">
+            <div className="row mt-5">
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 SEP 1999</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>{PersonalDetail.DOB}</span></li>
                   {/*<li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>*/}
                   <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9876543210</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>ChennaI</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chennai</span></li>
                 </ul>
               </div>
 
               <div className="col-lg-6">
                 <ul>
                   <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>MCA</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>yokeshwaranyoki001@gmail.com.com</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{PersonalDetail.Masters.PG_degree}</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{PersonalDetail.Email}</span></li>
                   {/*<li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>*/}
                 </ul>
               </div>
             </div>
 
-            <p className="py-3">
+            {/*<p className="py-3">
               Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut.
               Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
               Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-            </p>
+            </p>*/}
           </div>
         </div>
       </div>
     </section>
 
-    <section id="stats" className="stats section">
-  <div className="container" data-aos="fade-up" data-aos-delay="100">
-    <div className="row gy-4">
-      <div className="col-lg-3 col-md-6">
-        <div className="stats-item">
-          <i className="bi bi-emoji-smile"></i>
-          <span className="purecounter" data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1">
-            232
-          </span>
-          <p>
-            <strong>Happy Clients</strong> <span>consequuntur quae</span>
-          </p>
-        </div>
-      </div>
-
-      <div className="col-lg-3 col-md-6">
-        <div className="stats-item">
-          <i className="bi bi-journal-richtext"></i>
-          <span className="purecounter" data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1">
-            521
-          </span>
-          <p>
-            <strong>Projects</strong> <span>adipisci atque cum quia aut</span>
-          </p>
-        </div>
-      </div>
-
-      <div className="col-lg-3 col-md-6">
-        <div className="stats-item">
-          <i className="bi bi-headset"></i>
-          <span className="purecounter" data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1">
-            1453
-          </span>
-          <p>
-            <strong>Hours Of Support</strong> <span>aut commodi quaerat</span>
-          </p>
-        </div>
-      </div>
-
-      <div className="col-lg-3 col-md-6">
-        <div className="stats-item">
-          <i className="bi bi-people"></i>
-          <span className="purecounter" data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1">
-            32
-          </span>
-          <p>
-            <strong>Hard Workers</strong> <span>rerum asperiores dolor</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="skills" className="skills section light-background">
   {/* Section Title */}
   <div className="container section-title" data-aos="fade-up">
     <h2>Skills</h2>
-    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    <p>Through hands-on experience in real-world projects, I have cultivated a solid foundation in front-end and back-end web development. My skill set encompasses a diverse range of technologies and tools, enabling me to build responsive, scalable, and user-centric digital solutions.</p>
   </div>
 
   <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -280,9 +208,7 @@ export default function Home() {
   <div className="container section-title" data-aos="fade-up">
     <h2>Resume</h2>
     <p>
-      Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-      Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-      Quia fugiat sit in iste officiis commodi quidem hic quas.
+    A results-driven and detail-oriented web developer with a strong educational background and hands-on experience in front-end and back-end development. Passionate about building clean, responsive, and user-friendly websites, with a continuous desire to learn and grow in the ever-evolving tech industry
     </p>
   </div>
 
@@ -292,41 +218,23 @@ export default function Home() {
 
       {/* Left Column */}
       <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3 className="resume-title">Sumary</h3>
-        <div className="resume-item pb-0">
-          <h4>Brandon Johnson</h4>
-          <p>
-            <em>
-              Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
-              developing user-centered digital/print marketing material from initial concept to final, polished deliverable.
-            </em>
-          </p>
-          <ul>
-            <li>Portland par 127, Orlando, FL</li>
-            <li>(123) 456-7891</li>
-            <li>alice.barkley@example.com</li>
-          </ul>
-        </div>
-
+        
         <h3 className="resume-title">Education</h3>
         <div className="resume-item">
-          <h4>Master of Computer Application</h4>
-          <h5>2019 - 2021</h5>
-          <p><em>Vel Tech High Tech Engineering College, Chennai</em></p>
+          <h4>{PersonalDetail.Masters.PG_degree}</h4>
+          <h5>{PersonalDetail.Masters.Passed_out}</h5>
+          <p><em>{PersonalDetail.Masters.College}</em></p> 
           <p>
-            Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.
-            Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend
+          Completed post-graduate studies with a focus on computer science and software development. Gained foundational knowledge in areas such as database systems, networking, and application development. Developed a strong academic base for a future in the IT industry.
           </p>
         </div>
 
         <div className="resume-item">
-          <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-          <h5>2010 - 2014</h5>
-          <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+          <h4>{PersonalDetail.bachelor.Ug_degree}</h4>
+          <h5>{PersonalDetail.bachelor.Passed_out}</h5>
+          <p><em>{PersonalDetail.bachelor.College}</em></p>
           <p>
-            Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis
-            Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem
-            Earum molestiae consequatur neque etlon sader mart dila
+          Successfully completed undergraduate studies in computer applications. Built an understanding of fundamental computing concepts and programming logic. This program laid the groundwork for continued learning and advancement in the technology field.
           </p>
         </div>
       </div>
@@ -335,18 +243,28 @@ export default function Home() {
       <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <h3 className="resume-title">Professional Experience</h3>
         <div className="resume-item">
-          <h4>Senior graphic design specialist</h4>
-          <h5>2019 - Present</h5>
-          <p><em>Experion, New York, NY</em></p>
+          <h4>{PersonalDetail.Work_exp.Company_Name}</h4>
+          <h5>{PersonalDetail.Work_exp.Joining}</h5>
+          <p><em>{PersonalDetail.Work_exp.Location}</em></p>
           <ul>
-            <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-            <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
-            <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-            <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+            <li>Front-end Development: Building the user interface and user experience
+            of websites using HTML, CSS, Bootstrap, JavaScript, Ajax, jQuery. This 
+            involves creating responsive and visual appealing designs that work
+            across different devices.</li>
+            <li>Back-end Development: Writing server-side code in PHP to handle
+            database interactions with MYSQL.</li>
+            <li>Content Management Systems (CMS): Working with platform like
+             WordPress.</li>
+            <li>Updating the PHP version of a website is an important task to ensure
+            that the website remains secure, performs well, and stays compatible
+            with the latest technologies.</li>
+            <li>Implementation: We are responsible for implementing Google Analytics
+            tracking code on websites. This involves adding the Google Analytics
+            tracking script.</li>
           </ul>
         </div>
 
-        <div className="resume-item">
+        {/*<div className="resume-item">
           <h4>Graphic design specialist</h4>
           <h5>2017 - 2018</h5>
           <p><em>Stepping Stone Advertising, New York, NY</em></p>
@@ -356,13 +274,94 @@ export default function Home() {
             <li>Recommended and consulted with clients on the most appropriate graphic design</li>
             <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
           </ul>
-        </div>
+        </div>*/}
       </div>
 
     </div>
   </div>
 </section>
 
+<section id="contact" className="contact section">
+  {/* Section Title */}
+  <div className="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    {/*<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>*/}
+  </div>
+
+  <div className="container" data-aos="fade-up" data-aos-delay="100">
+    <div className="row gy-4">
+      <div className="col-lg-5">
+        <div className="info-wrap">
+          <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i className="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>{PersonalDetail.Address}</p>
+            </div>
+          </div>
+
+          <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i className="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>{PersonalDetail.Mobile}</p>
+            </div>
+          </div>
+
+          <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i className="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>{PersonalDetail.Email}</p>
+            </div>
+          </div>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+            frameBorder="0"
+            style={{ border: 0, width: '100%', height: '270px' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <div className="col-lg-7">
+        <form action="forms/contact.php" method="post" className="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div className="row gy-4">
+            <div className="col-md-6">
+              <label htmlFor="name-field" className="pb-2">Your Name</label>
+              <input type="text" name="name" id="name-field" className="form-control" required />
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="email-field" className="pb-2">Your Email</label>
+              <input type="email" className="form-control" name="email" id="email-field" required />
+            </div>
+
+            <div className="col-md-12">
+              <label htmlFor="subject-field" className="pb-2">Subject</label>
+              <input type="text" className="form-control" name="subject" id="subject-field" required />
+            </div>
+
+            <div className="col-md-12">
+              <label htmlFor="message-field" className="pb-2">Message</label>
+              <textarea className="form-control" name="message" rows="10" id="message-field" required></textarea>
+            </div>
+
+            <div className="col-md-12 text-center">
+              <div className="loading">Loading</div>
+              <div className="error-message"></div>
+              <div className="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer id="footer" className="footer position-relative light-background">
       <div className="container">
