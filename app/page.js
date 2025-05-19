@@ -1,11 +1,13 @@
+
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
-
+import Counter from '../components/contactForm.js'
 
 
 function Header(){
   return (
-  
+   
     <header id="header" className="header dark-background d-flex flex-column">
     <i className="header-toggle d-xl-none bi bi-list"></i>
 
@@ -368,7 +370,7 @@ export default function Home() {
         <div className="copyright text-center">
           <p>
             © <span>Copyright</span>{' '}
-            <strong className="px-1 sitename">iPortfolio</strong>{' '}
+            <strong className="px-1 sitename"></strong>{' '}
             <span>All Rights Reserved</span>
           </p>
         </div>
